@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "poetry-plugin-lock-filter"
+version = "0.1.0"
+description = "Poetry plugin and CLI for creating marker-specific lock files"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "RealDioBrando" }]
+requires-python = ">=3.11"
+dependencies = [
+  "packaging>=24.2",
+  "poetry>=2.1,<3",
+  "tomlkit>=0.11",
+]
+keywords = ["poetry", "plugin", "lock", "markers", "platform"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Build Tools",
+]
+
+[project.urls]
+Homepage = "https://github.com/RealDioBrando/poetry-plugin-lock-filter"
+Issues = "https://github.com/RealDioBrando/poetry-plugin-lock-filter/issues"
+
+[project.entry-points."poetry.application.plugin"]
+filter-lock = "poetry_plugin_lock_filter.plugin:FilterLockApplicationPlugin"
+
+[project.scripts]
+poetry-lock-filter = "poetry_plugin_lock_filter.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
