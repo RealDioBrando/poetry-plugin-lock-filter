@@ -35,13 +35,13 @@ Poetry 2.4.1 writes both packages to `poetry.lock`, even when only one branch is
 Install as a Poetry plugin:
 
 ```bash
-poetry self add git+https://github.com/RealDioBrando/poetry-plugin-lock-filter.git
+poetry self add poetry-plugin-lock-filter
 ```
 
 Or install it as a normal Python package:
 
 ```bash
-pip install git+https://github.com/RealDioBrando/poetry-plugin-lock-filter.git
+pip install poetry-plugin-lock-filter
 ```
 
 ## Poetry plugin usage
