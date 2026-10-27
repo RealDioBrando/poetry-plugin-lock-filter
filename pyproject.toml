@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "poetry-plugin-lock-filter"
-version = "0.1.2"
+version = "0.1.3"
 description = "Poetry plugin and CLI for creating marker-specific lock files"
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -39,5 +39,6 @@ poetry-lock-filter = "poetry_plugin_lock_filter.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
 
 
